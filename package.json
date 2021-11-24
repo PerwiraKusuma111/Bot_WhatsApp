@@ -1,14 +1,14 @@
 {
-  "name": "Herman-Chanel",
+  "name": "HermanChanel",
   "version": "1.0.0",
   "description": "JANGAN DI UBAH TOD LU CUMAN NUMPANG",
-  "main": "main.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node HermanGans.js"
+    "start": "index.js"
   },
   "author": "nino,iky,KurrXd,ZeroYT7",
   "dependencies": {
