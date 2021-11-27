@@ -1,0 +1,7 @@
+{
+  "name": "Bot",
+  "description": "WhatsApp Bot Nodejs",
+  "repository": "https://github.com/PerwiraKusuma111/Bot",
+  "logo": "https://user-images.githubusercontent.com/77143046/137623471-cbe3e0f5-eb13-4321-abbd-7a1e6e73f9ce.jpg",
+  "keywords": ["bot", "whatsapp", "whatsapp-bot"]
+}
