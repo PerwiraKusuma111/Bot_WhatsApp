@@ -26,18 +26,23 @@ Lu gausah asal claim sc ini, ganti nama/up di yt atas nama lu, sama aja lu ga ng
 # Join Group
 [![Group Bot](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EBI5SZfyE8Z6i4UJpcs9Tl)
 
-# ONLY RUN RAILWAY
-[`railway.app`](https://railway.app/new/github)
-## REST API
-**[`Riz Api`](https://x-restapi.herokuapp.com/)**
+# REST API
+**[`x-restapi`](https://x-restapi.herokuapp.com/)**
 
 # Editing the file
-
 Edit the required value in [`settings.js`](https://github.com/Rizxyu/RIXLE-BOT/blob/main/config.js)
 
-Create a new account at [`monggodb`](https://www.mongodb.com/cloud/atlas/register)
-
-
+# How to Install
+```js
+$ pkg update
+$ pkg install ffmpeg
+$ pkg install imagemagick
+$ pkg install git
+$ git clone https://github.com/PerwiraKusuma111/BotOne
+$ cd BotOne
+$ npm i
+$ node index
+```
 # KHUSUS TERMUX↓
 [`githubdl`](https://github.com/PerwiraKusuma111/BotOne)
 
