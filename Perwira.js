@@ -2065,8 +2065,8 @@ case 'ruleswave':
 }
 }
              break
-      /*case 'ytmp3':
-            if (!isPremium) return reply(mess.only.premium)
+      case 'ytmp3':
+            if (!isPremium && !mek.key.fromMe) return reply(mess.only.premium)
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
             teks = args.join(' ')
@@ -2087,9 +2087,9 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 
             sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: mek}).then((lalu) => {
             sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
-})*/
+})
             break
-     /*case 'ytmp4':
+     case 'ytmp4':
             if (!isPremium) return reply(mess.only.premium)
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
@@ -2112,7 +2112,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: mek}).then((lalu) => {
             sendFileFromUrl(res[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: res[0].output})
 })
-            break*/
+            break
      case 'ytmp4hd':
      case 'ythd':
             if (!isPremium) return reply(mess.only.premium)
@@ -2662,7 +2662,7 @@ Source : ${anu.result.source}
 				buffer1 = await getBuffer(anu.result.url_video)
 				conn.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Nih Gan'})
 					break
-                 case 'ytmp3':
+                 case 'ytmp32':
 				case 'ytplay':
 				gog = args.join(" ")
               bonn = await fetchJson(`http://hadi-api.herokuapp.com/api/ytplay?q=${gog}`)
