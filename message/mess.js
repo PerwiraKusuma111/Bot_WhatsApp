@@ -3,15 +3,15 @@ module.exports.mess = {
 			success: 'NI HASILNYA KAK',
 			wrongFormat: 'Format salah, coba liat lagi di menu',
 			error: {
-				api: 'APINYA HABIS BRO ISI ULANG DULU',
-				stick: 'ITU BUKAN STIKER TOLOL',
-				Iv: 'JANGAN NGASIH LINK GAJE TOD'
+				api: '_Error_',
+				stick: '_Harap reply stiker yang tidak ber animasi_',
+				Iv: '_Link gajelas njenk_'
 			},
 			only: {
-				group: 'KHUSUS GRUP BRO',
-				admin: 'KHUSUS ADMIN GRUP BRO',
-				premium: 'LU BUKAN MEMBER PREMIUM,BELI DULU SANA',
-				owner: 'KHUSUS OWNER BRO',
-				Badmin: 'BOT HARUS JADI ADMIN BRO',
+				group: '_Admin Only_',
+				admin: '_Group Only_',
+				premium: '_Premium Only_',
+				owner: '_Owner Only_',
+				Badmin: '_Bot id Admin only_',
 			}
 		}
