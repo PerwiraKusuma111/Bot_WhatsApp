@@ -2595,7 +2595,7 @@ break
               conn.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
-        case 'playy':
+        case 'play':
 case 'lagu':
 if (args.length < 1) return reply('Apa Yang Mau Dicari?')
 teks = args.join(' ')
@@ -2663,7 +2663,7 @@ Source : ${anu.result.source}
 				conn.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Nih Gan'})
 					break
                  case 'ytmp3':
-				case 'play':
+				case 'ytplay':
 				gog = args.join(" ")
               bonn = await fetchJson(`http://hadi-api.herokuapp.com/api/ytplay?q=${gog}`)
               title = `${bonn.result.title}`
