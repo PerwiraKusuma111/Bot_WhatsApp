@@ -10,7 +10,7 @@ Thanks to Herman penyedia base bot
 <a href="#"><img title="WhatsAp - Bot" src="https://img.shields.io/badge/WhatsAppBot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
-<a href="https://github.com/PerwiraKusuma111"><img title="Perwira Kusuma" src="https://img.shields.io/badge/Author-Herman-red.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/Hermanchanel"><img title="Perwira Kusuma" src="https://img.shields.io/badge/Author-Herman-red.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
 </p>
