@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index"
+    "start": "node index"
   },
   "author": "nino,iky,KurrXd,ZeroYT7",
   "dependencies": {
