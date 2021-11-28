@@ -15,12 +15,6 @@ Thanks to Herman penyedia base bot
 <p align="center">
 </p>
 </div>
-<p align="center">
-<a href="https://github.com/PerwiraKusuma111/followers"><img title="Followers" src="https://img.shields.io/github/followers/PerwiraKusuma111?style=flat-square"></a>
-<a href="https://github.com/PerwiraKusuma111/BotOne/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/PerwiraKusuma111/BotOne?style=flat-square"></a>
-<a href="https://github.com/PerwiraKusuma111/BotOne/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Rizxyu/RIXLE-BOT?style=flat-square"></a>
-<a href="https://github.com/PerwiraKusuma111/BotOne/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/Rizxyu/RIXLE-BOT?style=flat-square"></a>
-</p>
 
 ```js
 Script ini dirancang untuk pengguna rdp/Nodejs/Linux/Railway/heroku/replit
