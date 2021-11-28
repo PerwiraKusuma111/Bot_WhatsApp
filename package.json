@@ -2,7 +2,7 @@
   "name": "HermanChanel",
   "version": "1.0.0",
   "description": "JANGAN DI UBAH TOD LU CUMAN NUMPANG",
-  "main": "index",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
