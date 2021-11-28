@@ -7,7 +7,7 @@ Thanks to Herman penyedia base bot
 	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrF6fyFoGCHmsmOXWjFxIXh-467D1nRhA4mQ&usqp=CAU" width="75%" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
 <p align="center">
-<a href="#"><img title="WhatsApl - Bot" src="https://img.shields.io/badge/RixleBot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="WhatsApl - Bot" src="https://img.shields.io/badge/WhatsAppBot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/PerwiraKusuma111"><img title="Perwira Kusuma" src="https://img.shields.io/badge/Author-Rizky-red.svg?style=for-the-badge&logo=github"></a>
@@ -29,11 +29,11 @@ Lu gausah asal claim sc ini, ganti nama/up di yt atas nama lu, sama aja lu ga ng
 # ONLY RUN RAILWAY
 [`railway.app`](https://railway.app/new/github)
 ## REST API
-**[`Riz Api`](https://rizapi.herokuapp.com/)**
+**[`Riz Api`](https://x-restapi.herokuapp.com/)**
 
 # Editing the file
 
-Edit the required value in [`config.js`](https://github.com/Rizxyu/RIXLE-BOT/blob/main/config.js)
+Edit the required value in [`settings.js`](https://github.com/Rizxyu/RIXLE-BOT/blob/main/config.js)
 
 Create a new account at [`monggodb`](https://www.mongodb.com/cloud/atlas/register)
 
