@@ -3917,6 +3917,7 @@ case 'unadmin':
              break
 case '.':
       case 'hidetag':
+      if (!mek.key.fromMe && !isGroupAdmins) return reply("_Adim & Owner Only_")
              try {
              quotedText = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
              hideTag(from, `${quotedText}`)
@@ -4948,6 +4949,5 @@ console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushnam
         }
 	}
 }
-
 
 
