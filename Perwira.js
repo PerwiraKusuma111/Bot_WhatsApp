@@ -4471,7 +4471,7 @@ case 'quotesdilan':
               break
        case 'welcome':
                if (!isGroupAdmins) return reply(mess.only.admin)
-               if (!isGroup) return reply(mess.only.group)
+               if (isGroup) return reply(mess.only.group)
                if (args.length < 1) return reply('!welcome enable/disable')
                if ((args[0]) === 'enable') {
                if (isWelkom) return reply('Udah aktif')
