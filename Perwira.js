@@ -1543,7 +1543,7 @@ case 'level':
 *\\Role   :* ${role}`
 menuu= ` \n*Info Bot*
 
- *Owner    :* Perwira Kusuma
+ *Owner    :* Rahasia
  *Number :* @6281232646925
  *Active    :* ${runtime(process.uptime())}
 
@@ -1602,7 +1602,7 @@ ${time}`
 
                prep = await conn.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
               conn.relayWAMessage(prep)*/
-              sendButLocation(from, `${menu}`, `${menuu}\nPerwira Bot WhatsApp`, {jpegThumbnail: fs.readFileSync(`./media/canss.jpg`)}, [{buttonId:`${prefix}youtube`,buttonText:{displayText:'YouTube'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'Owner'},type:1}], {contextInfo: {mentionedJid: ["6281232646925@s.whatsapp.net", `${sender}`]}})
+              sendButLocation(from, `${menu}`, `${menuu}\nBot WhatsApp`, {jpegThumbnail: fs.readFileSync(`./media/canss.jpg`)}, [{buttonId:`${prefix}youtube`,buttonText:{displayText:'YouTube'},type:1},{buttonId:`Oke`,buttonText:{displayText:'Oke'},type:1}], {contextInfo: {mentionedJid: ["6281232646925@s.whatsapp.net", `${sender}`]}})
                 break
 case 'mr':
 if (!mek.key.fromMe) return
