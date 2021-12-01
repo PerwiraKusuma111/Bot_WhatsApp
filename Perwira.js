@@ -1518,7 +1518,11 @@ case 'level':
 					await reply(`Error!\n${err}`)
 					})
 					break
-
+case 'tahta':
+if (args.length < 1) return reply("Masukkan teksnya")
+donty = await getBuffer(`https://api.zeks.me/api/hartatahta?apikey=Rkm5VgPvmNWXm35NnTY0x0aCcT2&text=${q}`)
+conn.sendMessage(from, donty, image)
+break
 
         case 'menu':
         case 'help':
@@ -1565,6 +1569,7 @@ menuu= ` \n*Info Bot*
  ${prefix}mediafire
 
  *Tools Menu*
+ ${prefix}tahta
  ${prefix}sticker
  ${prefix}toimg
  ${prefix}tovideo
