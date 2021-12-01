@@ -1599,7 +1599,7 @@ ${time}`
 
                prep = await conn.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
               conn.relayWAMessage(prep)*/
-              sendButLocation(from, `${menu}`, `${menuu}\nBot WhatsApp`, {jpegThumbnail: fs.readFileSync(`./media/canss.jpg`)}, [{buttonId:`${prefix}youtube`,buttonText:{displayText:'YouTube'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'Owner'},type:1}], {contextInfo: {mentionedJid: ["6281232646925@s.whatsapp.net", `${sender}`]}})
+              sendButLocation(from, `${menu}`, `${menuu}\nBot WhatsApp`, {jpegThumbnail: fs.readFileSync(`./media/canss.jpg`)}, [{buttonId:`${prefix}youtube`,buttonText:{displayText:'YouTube'},type:1},{buttonId:`Oke`,buttonText:{displayText:'Oke'},type:1}], {contextInfo: {mentionedJid: ["6281232646925@s.whatsapp.net", `${sender}`]}})
                 break
 case 'mr':
 if (!mek.key.fromMe) return
