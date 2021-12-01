@@ -1572,8 +1572,6 @@ menuu= ` \n*Info Bot*
  
  *Game Menu*
  ${prefix}tebakgambar
- ${prefix}tictactoe
- ${prefix}tebaklagu
  ${prefix}suit
 
 \`\`\`Note: Jika tidak merespon kemungkinan Bot Error atau sedang diperbaiki, Anda Spam? gwa banned.\`\`\`
