@@ -1366,30 +1366,30 @@ uptime = process.uptime();
             atm.addKoinUser(sender, randomNomor(20), _uang)
             console.log(color('[ GC ]'), color(time, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))*/
             
-            /*if(isCmd && !isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)*/
+            if(isCmd && !isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)
         if(isCmd && !isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'),(`\x1b[1;37mPesan : \x1b[1;32m${pop}`))
-        /*if(isCmd && !isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} ]`, 'cyan'))*/
-        /*if(isCmd && !isGroup) console.log(' ')*/
+        if(isCmd && !isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} ]`, 'cyan'))
+        if(isCmd && !isGroup) console.log(' ')
         
-        /*if(isCmd && isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)*/
+        if(isCmd && isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)
         if(isCmd && isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'),(`\x1b[1;37mPesan : \x1b[1;32m${pop}`))
-        /*if(isCmd && isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} - ${groupName} ]`, 'cyan'))
-        /*if(isCmd && isGroup) console.log(' ')*/
+        if(isCmd && isGroup) console.log(bgcolor(`\x1b[1;37m[CMD]`, 'blue'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} - ${groupName} ]`, 'cyan'))
+        if(isCmd && isGroup) console.log(' ')
         
-        /*if(!isCmd && !isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)*/
+        if(!isCmd && !isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)
         if(!isCmd && !isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),(`\x1b[1;37mPesan : \x1b[1;32m${pop}`))
-        /*if(!isCmd && !isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} ]`, 'cyan'))*/
-        /*if(!isCmd && !isGroup) console.log(' ')*/
+        if(!isCmd && !isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} ]`, 'cyan'))
+        if(!isCmd && !isGroup) console.log(' ')
         
-        /*if(!isCmd && isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)*/
+        if(!isCmd && isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)
         if(!isCmd && isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),(`\x1b[1;37mPesan : \x1b[1;32m${pop}`))
-        /*if(!isCmd && isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} - ${groupName} ]`, 'cyan'))*/
-        /*if(!isCmd && isGroup) console.log(' ')*/
+        if(!isCmd && isGroup) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} - ${groupName} ]`, 'cyan'))
+        if(!isCmd && isGroup) console.log(' ')
         
-        /*if(!isCmd && !isGroup && isImage) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)*/
+        if(!isCmd && !isGroup && isImage) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),bgcolor(`\x1b[1;33m[${time}]`, 'red'), bgcolor(`\x1b[1;31m${sender}`, 'yellow'), '\x1b[1;37mroom', bgcolor(`\x1b[1;33m${from}`, 'red'), `\x1b[0m`)
         if(!isCmd && !isGroup && isImage) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'),(`\x1b[1;37mPesan : \x1b[1;32mImage`))
-       /* if(!isCmd && !isGroup && isImage) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} ]`, 'cyan'))*/
-       / /*if(!isCmd && !isGroup && isImage) console.log(' ')*/
+        if(!isCmd && !isGroup && isImage) console.log(bgcolor(`\x1b[1;31m[MSG]`, 'yellow'), (`\x1b[1;37mFrom  : `),color(`[ ${pushname} ]`, 'cyan'))
+        if(!isCmd && !isGroup && isImage) console.log(' ')
         
         
         /*if (isMedia && !mek.message.videoMessage || isImage) {*/
@@ -4248,4 +4248,3 @@ console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushnam
         }
 	}
 }
-
