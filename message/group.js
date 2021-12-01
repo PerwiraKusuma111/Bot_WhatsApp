@@ -38,11 +38,11 @@ module.exports = welcome = async (dha, anu) => {
                 let v = dha.contacts[num] || { notify: num.replace(/@.+/, '') }
                 anu_user = v.vname || v.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
-                teks = `Hai ${anu_user} \nSaya Botz \nTerima kasih sudah masuk di Grup Ini\nIntro Dulu Ya Biar Kenal\n Nama:\n Umur:\n Askot:\nSemoga Betah`
+                teks = `Hai ${anu_user}\nSaya Bot\nTerima kasih sudah masuk di Grup Ini\nIntro Dulu Ya Biar Kenal\nNama:\nUmur:\nAskot:\nSemoga Betah`
 	            buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://i.postimg.cc/rFkw8MpX/IMG-20210807-151325.jpg`)
-                buttons = [{buttonId: `#y`,buttonText:{displayText: 'SIAP BANG'},type:1}]
+                buttons = [{buttonId: `#y`,buttonText:{displayText: 'Oke'},type:1}]
                 imageMsg = (await dha.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
-                buttonsMessage = { contentText: `${teks}`, footerText: 'Herman Botz🇲🇨', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
+                buttonsMessage = { contentText: `${teks}`, footerText: 'Bot WhatsApp', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
                 prep = await dha.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
                 dha.relayWAMessage(prep)
 }
@@ -56,9 +56,9 @@ module.exports = welcome = async (dha, anu) => {
                 memeg = mdata.participants.length
                 out = `Byee...\n> ${anu_user}`
                 buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://i.postimg.cc/rFkw8MpX/IMG-20210807-151325.jpg`)
-                buttons = [{buttonId: `#t`,buttonText:{displayText: 'GOD BYE'},type:1}]
+                buttons = [{buttonId: `#t`,buttonText:{displayText: 'Good Bye'},type:1}]
                 imageMsg = (await dha.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
-                buttonsMessage = { contentText: `${out}`, footerText: 'Herman Botz🇲🇨', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
+                buttonsMessage = { contentText: `${out}`, footerText: 'Bot WhatsApp', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
                 prep = await dha.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
                 dha.relayWAMessage(prep)
             }
