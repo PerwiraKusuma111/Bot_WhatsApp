@@ -44,5 +44,5 @@ $ npm i
 $ node index
 ```
 # KHUSUS TERMUX↓
-[`githubdl`](https://github.com/PerwiraKusuma111/BotOne)
+[`Script`](https://github.com/PerwiraKusuma111/BotOne)
 
