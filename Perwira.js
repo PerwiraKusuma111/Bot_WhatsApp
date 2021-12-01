@@ -1538,13 +1538,7 @@ break
 					})*/
         menu =`*Bot WhatsApp*
 
-*Hallo… ${pushname}*
-
-*Your Info*
-*No      :* @${sender.split("@")[0]}
-*XP      :* ${userXp}/${requiredXp}
-*Level  :* ${userLevel}
-*Role   :* ${role}`
+*Hallo… ${pushname}*`
 menuu= ` \n*Info Bot*
 
  *Owner    :* Mr.Agent
