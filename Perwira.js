@@ -2668,11 +2668,11 @@ reply('wait....')
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
-       case 'attp':
+       /*case 'attp':
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
               conn.sendMessage(from, buffer, sticker, { quoted: mek })
-              break
+              break*/
        
        case 'loliv':
        case 'lolivid':
