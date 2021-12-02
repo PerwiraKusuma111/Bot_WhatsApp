@@ -2652,6 +2652,7 @@ anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
        case 'attp':
+if (!mek.key.fromMe) return reply("Fitur ini masih error untuk saat ini")
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
               conn.sendMessage(from, buffer, sticker, { quoted: mek })
