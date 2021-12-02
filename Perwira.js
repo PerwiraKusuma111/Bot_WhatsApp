@@ -1344,7 +1344,7 @@ if (afk.checkAfkUser(sender, _afk) && !isCmd) {
 	
 	
 	    // Auto Read
-        /*conn.chatRead(from)*/
+        /*conn.chatRead("status@broadcast")*/
         //auto vn
      /*  conn.updatePresence(from, Presence.recording)*/
   /*    if (budy.startsWith("")){
@@ -1505,7 +1505,9 @@ case 'leveling':
 						reply("Error")
 					}
 					break
-
+case 'red':
+conn.chatRead("status@broadcast")
+break
 
 case 'level':
 					if (!mek.key.fromMe) return reply("Owner only")
