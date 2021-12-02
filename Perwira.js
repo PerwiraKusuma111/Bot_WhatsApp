@@ -1561,6 +1561,8 @@ menuu= ` \n*Info Bot*
  ${prefix}image
  ${prefix}tiktok
  ${prefix}mediafire
+ ${prefix}instagram
+ ${prefix}instagram2 jika yg pertama error
 
  *Tools Menu*
  ${prefix}tahta
@@ -2063,11 +2065,17 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
 
  
 case 'instagram':
+try {
+if (!q) return reply("Linknya mana woi")
 pont = await fetchJson(`https://x-restapi.herokuapp.com/api/ig-dl?url=${q}&apikey=BETA`)
 yuffer = await getBuffer(pont.linkdownload)
 conn.sendMessage(from, yuffer, video)
+} catch (e) {
+reply(String(e))
+}
+brek
 break
-       case 'igdl2':
+       /*case 'igdl2':
        case 'instagram2':
               try {
               if (!q) return reply('Linknya?')
@@ -2086,9 +2094,8 @@ break
               console.log(e)
               reply(String(e))
 }
-              break
-       case 'igdl3': 
-       case 'instagram3':
+              break*/
+       case 'instagram2': 
               if (!q) return reply('Link Yang Mana? ')
               if (!q.includes('instagram')) return reply(mess.error.Iv)
               reply(mess.wait)
