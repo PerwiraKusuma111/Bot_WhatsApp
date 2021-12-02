@@ -2062,21 +2062,11 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               break
 
  
-case 'igdl':
-       case 'instagram':
-              try {
-              if (!isUrl(q)) return reply('Linknya?')
-              reply(mess.wait)
-              res = await axios.get(`https://api.lolhuman.xyz/api/instagram2?apikey=${setting.lolkey}&url=${args[0]}`)
-              data = res.data.result
-              for (let i = 0; i < data.media.length; i++) {
-              sendMediaURL(from, data.media[i], data.caption, {thumbnail: Buffer.alloc(0)})
-}
-              } catch (e) {
-              console.log(e)
-              reply(String(e))
-}
-              break 
+case 'instagram':
+pont = await fetchJson(`https://x-restapi.herokuapp.com/api/ig-dl?url=${q}&apikey=BETA`)
+yuffer = await getBuffer(pont.linkdownload)
+conn.sendMessage(from, yuffer, video)
+break
        case 'igdl2':
        case 'instagram2':
               try {
