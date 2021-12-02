@@ -1438,7 +1438,7 @@ uptime = process.uptime();
                 			}
 					break
            case 'q':
-nekk = x mek.message.extendedTextMessage.contextInfo.quotedMessage
+nekk = mek.message.extendedTextMessage.contextInfo.quotedMessage
 gop = conn.prepareMessageFromContent(from, nekk, {contextInfo: {}})
 conn.relayWAMessage(gop)
 break
