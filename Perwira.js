@@ -2202,7 +2202,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
               reply(`eror`)
 }
               break
-        case 'google':
+        /*case 'google':
               if (!q) return reply(mess.wrongFormat)
               ss = await getBuffer(`https://api.apiflash.com/v1/urltoimage?access_key=f3fce33fa6804c0b97c897b3bd2ec7a8&url=https://google.com/search?q=${q}`)
               reply(mess.wait)
@@ -2217,7 +2217,21 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
                console.log(e)
                reply(`${e}`)
 })
-               break
+               break*/
+case 'google':
+				
+                    if (args.length == 0) return reply(`Example: ${prefix + command} loli kawaii`)
+                    query = args.join(" ")
+                    get_result = await fetchJson(`https://x-restapi.herokuapp.com/api/google-search?q=${q}&apikey=BETA`)
+                    gt_result = get_result.data
+                    ini_txt = 'Google Search : \n'
+                    for (var x of gt_result) {
+                        ini_txt += `• Title : ${x.title}\n`
+                        ini_txt += `Link : ${x.link}\n`
+                        ini_txt += `Desc : ${x.desc}\n\n`
+                    }
+                    reply(ini_txt)
+                    break 
         case 'mediafire':
                
                if (args.length < 1) return reply('Link Nya Mana? ')
