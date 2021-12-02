@@ -1437,7 +1437,11 @@ uptime = process.uptime();
                     		conn.sendMessage(from, ppimg, image, {quoted: mek, caption: `*[Terdaftar]*\nNama: ${namaUser}\nNo.    : @${sender.split("@")[0]}\nUmur : ${umurUser}\nNs.     : 72nkG82hkwi920hapun`, contextInfo: {mentionedJid: [`${sender}`]}})
                 			}
 					break
-           
+           case 'q':
+nekk = x mek.message.extendedTextMessage.contextInfo.quotedMessage
+gop = conn.prepareMessageFromContent(from, nekk, {contextInfo: {}})
+conn.relayWAMessage(gop)
+break
        case 'donasi':
                txtt =`*Hai Kak* ${pushname} *Yang Baik*\n*Mau donasi?* Dikasih Syukur, Gak jadi Gpp :)`
 
