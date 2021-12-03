@@ -2649,7 +2649,7 @@ a += `\`\`\` Title : ${i.title}\`\`\`
        try {
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${encodeURI(q)}`)
-              conn.sendMessage(from, buffer, sticker, { quoted: mek })
+              sendWebp(from, buffer, sticker, { quoted: mek })
               } catch(e) {
               	reply(e)
               }
