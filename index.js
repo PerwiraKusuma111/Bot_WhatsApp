@@ -9,8 +9,8 @@ baterai = 'unknown'
 charging = 'unknown'
 
 //nocache
-require('./main.js')
-nocache('../main.js', module => console.log(color('[WATCH]', 'yellow'), color(`'${module}'`, 'cyan'), 'File is updated!'))
+require('./Perwira.js')
+nocache('../Perwira.js', module => console.log(color('[WATCH]', 'yellow'), color(`'${module}'`, 'cyan'), 'File is updated!'))
 require('./message/group.js')
 nocache('../message/group.js', module => console.log(color('[WATCH]', 'yellow'), color(`'${module}'`, 'yellow'), 'File is updated!'))
 
@@ -121,7 +121,7 @@ const spinner = {
 	})
 
 	conn.on('chat-update', async (message) => {
-		require('./main.js')(conn, message)
+		require('./Perwira.js')(conn, message)
 	})
 }
 
