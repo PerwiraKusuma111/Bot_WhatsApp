@@ -1558,6 +1558,7 @@ menuu= `*List Menu*
  ${prefix}igdl
 
  *Tools Menu*
+ ${prefix}ttp
  ${prefix}attp
  ${prefix}tahta
  ${prefix}sticker
@@ -2644,15 +2645,17 @@ a += `\`\`\` Title : ${i.title}\`\`\`
 }
 )
               break
+ case 'ttp':
+       try {
+              if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
+              buffer = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${encodeURI(q)}`)
+              conn.sendMessage(from, buffer, sticker, { quoted: mek })
+              } catch(e) {
+              	reply(e)
+              }
+              break
        
        
-case 'ttp':
-if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
-woy = args.join(" ")
-reply('wait....')
-anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
-sendStickerUrl(from, anjay)
-break
        case 'attp':
        try {
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
