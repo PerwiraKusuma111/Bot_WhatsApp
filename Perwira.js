@@ -2649,29 +2649,8 @@ a += `\`\`\` Title : ${i.title}\`\`\`
        try {
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${encodeURI(q)}`)
-              const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-            const media = buffer
-                ran = '666.webp'
-                await ffmpeg(`./${media}`)
-                .input(media)
-                .on('start', function (cmd) {
-                     console.log(`Started : ${cmd}`)
-                })
-                .on('error', function (err) {
-                 console.log(`Error : ${err}`)
-                fs.unlinkSync(media)
-                reply('error')
-                })
-                .on('end', function () {
-                console.log('Finish')
-                conn.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
-                 fs.unlinkSync(media)
-                fs.unlinkSync(ran)
-                })
-                .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-                .toFormat('webp')
-                .save(ran)
-              } catch(e) {
+              conn.sendMessage(from, buffer, image, {quoted: mek})
+} catch(e) {
               	reply(e)
               }
               break
