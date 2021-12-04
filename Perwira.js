@@ -2065,7 +2065,6 @@ conn.sendMessage(from, yuffer, video)
 } catch (e) {
 reply(String(e))
 }
-brek
 break
        /*case 'igdl2':
        case 'instagram2':
