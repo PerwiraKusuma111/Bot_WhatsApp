@@ -1341,10 +1341,10 @@ if (afk.checkAfkUser(sender, _afk) && !isCmd) {
         /*conn.chatRead("status@broadcast")*/
         //auto vn
      /*  conn.updatePresence(from, Presence.recording)*/
-  /*    if (budy.startsWith("")){
+  if (budy.startsWith("")){
       	for (let _ of totalchat) {
-      	conn.updatePresence(_.jid, Presence.recording)
-      }}*/
+      	conn.updatePresence(_.jid, Presence.composing)
+      }}
    /*   if (budy.startsWith("x")) {
       	if (!mek.key.fromMe) return
 uptime = process.uptime();
