@@ -1811,9 +1811,9 @@ conn.sendMessage(from, pesanya, text, {quoted: mek})
 break
 case 'pantun':
 bon = await fetchJson(`https://x-restapi.herokuapp.com/api/random-pantun?apikey=BETA`)
-pesanya =`*_Pantun_*
+pesanya =`*Pantun*
 
-_${bon.pantun}_
+${bon.pantun}
 `
 conn.sendMessage(from, pesanya, text, {quoted: mek})
 break
