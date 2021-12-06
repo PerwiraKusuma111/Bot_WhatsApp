@@ -1341,7 +1341,8 @@ if (afk.checkAfkUser(sender, _afk) && !isCmd) {
         /*conn.chatRead("status@broadcast")*/
         //auto vn
      /*  conn.updatePresence(from, Presence.recording)*/
-  /*if (budy.startsWith("")){
+  //Jid
+/*if (budy.startsWith("")){
       	for (let _ of totalchat) {
       	conn.updatePresence(_.jid, Presence.composing)
       }}*/
