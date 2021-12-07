@@ -1046,6 +1046,7 @@ const levelRole = getLevelingLevel(sender)
         colors = ['red', 'white', 'black', 'blue', 'yellow', 'green']
 		const isMedia = (type === 'imageMessage' || type === 'videoMessage' || type === 'stickerMessage' || type === 'audioMessage')
 		const isImage = (type === 'imageMessage')
+                const isQuotedtext = type === 'extendedTextMessage' && content.includes('extendedTextMessage')
 		const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 		const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 		const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
@@ -3744,51 +3745,23 @@ case 'linkgc':
 }
              break
 case 'admin':
-      case 'promote':
-             if (isGroupAdmins && !mek.key.fromMe) return reply("_Admins only_")
-             if (!isGroup) return reply("_Group only_")
-             if (!isGroup) {
-             entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
-             
-             if (entah.length > 0) {
-             var mems_ids = []
-             for (let ids of entah) {
-             mems_ids.push(ids)
-}
-             conn.groupMakeAdmin(from, mentionUser)
-             reply('🗿')
- } else {
-             conn.groupMakeAdmin(from, entah)
-}
-             } else {
-            
+             if (!isBotGroupAdmins) return reply("_Bot Admin Only_")
+             if (isGroupAdmins) return reply("_Only Admin_")
+            if (!isGroup) return reply("_Group Admins Only_")
+             if (!isQuotedtext && !isQuotedImage && !isQuotedVideo && !isQuotedSticker && !isQuotedAudio) return reply("_Reply pesan member yang ingin dijadikan admin_")
              entah = mek.message.extendedTextMessage.contextInfo.participant
              conn.groupMakeAdmin(from, [entah])
-}
-             break
-
+             reply('🗿')
+break
 case 'unadmin':
-      case 'demote':
-             
-             if (isGroupAdmins && !mek.key.fromMe) return reply("_Admins only_")
-             if (!isGroup) return reply(mess.only.admin)
-             if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
-             if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
-             entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
-             if (entah.length > 0) {
-             var mems_ids = []
-             for (let ids of entah) {
-             mems_ids.push(ids)
-}
-             conn.groupDemoteAdmin(from, mems_ids)
-            reply('🗿') } else {
-             conn.groupDemoteAdmin(from, entah)
-}
-             } else {
+           if (!isBotGroupAdmins) return reply("_Bot Admin Only_")
+             if (isGroupAdmins) return reply("_Only Admin_")
+            if (!isGroup) return reply("_Group Admins Only_")
+             if (!isQuotedtext && !isQuotedImage && !isQuotedVideo && !isQuotedSticker && !isQuotedAudio) return reply("_Reply pesan member yang ingin dijadikan admin_")
              entah = mek.message.extendedTextMessage.contextInfo.participant
              conn.groupDemoteAdmin(from, [entah])
-}
-             break
+             reply('🗿')
+break
  case 'raw':
 tksnya = mek
 conn.sendMessage(from, tksnya, text)
