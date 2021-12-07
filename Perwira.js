@@ -71,6 +71,7 @@ const level = require("./lib/level");
 const atm = require("./lib/atm");
 const _sewa = require("./lib/sewa");
 
+simi = false
 var kuis = false
 hit_today = []
 ky_ttt = []
@@ -1413,7 +1414,7 @@ uptime = process.uptime();
 					const userXp = getLevelingXp(sender)
 					/*if (userLevel === undefined && userXp === undefined) return console.log("noregist")*/
 					const requiredXp = 1000 * (Math.pow(2, userLevel) - 1)
-
+if (!simi) {
 if (!isGroup) {
 		if (!command) {
 		if (!isMedia) {
@@ -1421,7 +1422,7 @@ if (!isGroup) {
 		siminya = await fetchJson(`https://api-sv2.simsimi.net/v2/?text=${pop}&lc=id`)
 		msgsimi = siminya.success
 		conn.sendMessage(from, `${msgsimi}\n                                   _ˢⁱᵐⁱ ᵐᵉˢˢᵃᵍᵉ_`, text, {quoted: mek, sendEphemeral: true, contextInfo : {forwardingScore: 508, isForwarded: true}})
-		}}}
+		}}}}
 		
             switch(command){
             	case 'simi_on':
