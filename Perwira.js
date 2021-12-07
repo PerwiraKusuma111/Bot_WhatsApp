@@ -3745,8 +3745,8 @@ case 'linkgc':
              break
 case 'admin':
       case 'promote':
-             reply('🗿')
-             if (!isGroupAdmins && !mek.key.fromMe && !isGroup) return reply(mess.only.admin)
+             if (!isGroupAdmins) return reply("_Admins only_")
+             if (!isGroup) return reply("_Group only_")
              if (!isGroup) {
              entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
              
@@ -3756,7 +3756,8 @@ case 'admin':
              mems_ids.push(ids)
 }
              conn.groupMakeAdmin(from, mentionUser)
-             } else {
+             reply('🗿')
+ } else {
              conn.groupMakeAdmin(from, entah)
 }
              } else {
@@ -3767,8 +3768,9 @@ case 'admin':
              break
 case 'unadmin':
       case 'demote':
-             reply('🗿')
-             if (!mek.key.fromMe && !isGroup) return reply(mess.only.admin)
+             
+             if (!isGroupAdmins) return reply("_Admins only_")
+             if (!isGroup) return reply(mess.only.admin)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
              if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
              entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -3778,7 +3780,7 @@ case 'unadmin':
              mems_ids.push(ids)
 }
              conn.groupDemoteAdmin(from, mems_ids)
-             } else {
+            reply('🗿') } else {
              conn.groupDemoteAdmin(from, entah)
 }
              } else {
