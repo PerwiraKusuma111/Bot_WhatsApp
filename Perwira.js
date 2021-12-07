@@ -2544,14 +2544,14 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             break
 case 'ytmp4':
 bupjson = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${q}`)
-thumb = await getBuffer(bupjson.album)
-vidnya = await getBuffer(bupjson.download_video)
+thumb = await getBuffer(bupjson.result.album)
+vidnya = await getBuffer(bupjson.result.download_video)
 tampilann = `*YouTube Mp4*
 
-*Judul :* ${bupjson.title}
-*desc :* ${bupjson.desc}
-*viewer :* ${bupjson.viewer}
-*like :* ${bupjson.like}
+*Judul :* ${bupjson.result.title}
+*desc :* ${bupjson.result.desc}
+*viewer :* ${bupjson.result.viewer}
+*like :* ${bupjson.result.like}
 
 *Media akan dikirim beberapa saat*
 *Jika error gunakan command .ytmp42*`
@@ -2862,7 +2862,7 @@ Media akan dikirim, tunggu beberapa saat.
 conn.sendMessage(from, thumb, image, {quoted: mek, caption: mentu})
 conn.sendMessage(from, mp3, audio, {mimetype: 'audio/mp4',quoted: mek})
 break
-case 'ytmp4':
+case 'ytmppppp':
 				gog = args.join(" ")
               bonn = await fetchJson(`http://hadi-api.herokuapp.com/api/ytplay?q=${gog}`)
               title = `${bonn.result.title}`
