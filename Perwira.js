@@ -2543,15 +2543,15 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 })
             break
 case 'ytmp4':
-bufjson = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${q}`)
-thumb = await getBuffer(bufjson.album)
-vidnya = await getBuffer(bufjson.download_video)
+bupjson = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${q}`)
+thumb = await getBuffer(bupjson.album)
+vidnya = await getBuffer(bupjson.download_video)
 tampilann = `*YouTube Mp4*
 
-*Judul :* ${bufjson.title}
-*desc :* ${bufjson.desc}
-*viewer :* ${bufjson.viewer}
-*like :* ${bufjson.like}
+*Judul :* ${bupjson.title}
+*desc :* ${bupjson.desc}
+*viewer :* ${bupjson.viewer}
+*like :* ${bupjson.like}
 
 *Media akan dikirim beberapa saat*
 *Jika error gunakan command .ytmp42*`
