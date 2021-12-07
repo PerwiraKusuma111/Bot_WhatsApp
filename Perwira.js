@@ -2543,6 +2543,23 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 })
             break
 case 'ytmp4':
+bufjson = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${q}`)
+thumb = await getBuffer(bufjson.album)
+vidnya = await getBuffer(bufjson.download_video)
+tampilann = `*YouTube Mp4*
+
+*Judul :* ${bufjson.title}
+*desc :* ${bufjson.desc}
+*viewer :* ${bufjson.viewer}
+*like :* ${bufjson.like}
+
+*Media akan dikirim beberapa saat*
+*Jika error gunakan command .ytmp42*`
+conn.sendMessage(from, thumb, image, {quoted: mek, caption: tampilann})
+conn.sendMessage(from, vidnya, video, {quoted: mek})
+break
+ 
+case 'ytmp43':
 fjson = await fetchJson(`https://x-restapi.herokuapp.com/api/ytmp4?url=${q}&apikey=BETA`)
 thumbn = await getBuffer(fjson.thumb)
 dlvid = await getBuffer(fjson.dl_link)
@@ -2840,7 +2857,8 @@ Type: ${tipet}
 Resolution: ${resolusi}
 Size: ${ukuran}
 
-Media akan dikirim, tunggu beberapa saat.`
+Media akan dikirim, tunggu beberapa saat.
+*Jika error gunakan command #music*`
 conn.sendMessage(from, thumb, image, {quoted: mek, caption: mentu})
 conn.sendMessage(from, mp3, audio, {mimetype: 'audio/mp4',quoted: mek})
 break
