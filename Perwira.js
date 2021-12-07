@@ -2542,7 +2542,21 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
 })
             break
-     case 'ytmp4':
+case 'ytmp4':
+fjson = await fetchJson(`https://x-restapi.herokuapp.com/api/ytmp4?url=${q}&apikey=BETA`)
+thumbn = await getBuffer(fjson.thumb)
+dlvid = await getBuffer(fjson.dl_link)
+tampilany = `*YouTube mp4*
+
+*Judul :* ${fjson.title}
+*Size :* ${fjson.filesize}
+
+*Media akan dikirim beberapa saat*`
+conn.sendMessage(from, thumbn, image, {quoted: mek, caption: tampilany})
+conn.sendMessage(from, dlvid, video, {quoted: mek})
+break
+
+     case 'ytmp42':
             
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
@@ -2742,7 +2756,7 @@ break
               conn.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
-        case 'play':
+        case 'music':
 case 'lagu':
 if (args.length < 1) return reply('Apa Yang Mau Dicari?')
 teks = args.join(' ')
@@ -2809,7 +2823,7 @@ Source : ${anu.result.source}
 				buffer1 = await getBuffer(anu.result.url_video)
 				conn.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:freply, caption: 'Nih Gan'})
 					break
-                 case 'ytmp32':
+                 case 'play':
 				case 'ytplay':
 				gog = args.join(" ")
               bonn = await fetchJson(`http://hadi-api.herokuapp.com/api/ytplay?q=${gog}`)
