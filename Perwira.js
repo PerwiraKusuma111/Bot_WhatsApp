@@ -3745,7 +3745,7 @@ case 'linkgc':
              break
 case 'admin':
       case 'promote':
-             if (!isGroupAdmins) return reply("_Admins only_")
+             if (!isGroupAdmins && !mek.key.fromMe) return reply("_Admins only_")
              if (!isGroup) return reply("_Group only_")
              if (!isGroup) {
              entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -3766,10 +3766,11 @@ case 'admin':
              conn.groupMakeAdmin(from, [entah])
 }
              break
+
 case 'unadmin':
       case 'demote':
              
-             if (!isGroupAdmins) return reply("_Admins only_")
+             if (!isGroupAdmins && !mek.key.fromMe) return reply("_Admins only_")
              if (!isGroup) return reply(mess.only.admin)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
              if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
