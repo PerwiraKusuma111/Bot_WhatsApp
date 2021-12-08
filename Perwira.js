@@ -3777,7 +3777,7 @@ case 'linkgc':
              break
 case 'admin':
              if (!isBotGroupAdmins) return reply("_Bot Admin Only_")
-             if (isGroupAdmins) return reply("_Only Admin_")
+             if (!isGroupAdmins) return reply("_Only Admin_")
             if (!isGroup) return reply("_Group Admins Only_")
              if (!isQuotedtext && !isQuotedImage && !isQuotedVideo && !isQuotedSticker && !isQuotedAudio) return reply("_Reply pesan member yang ingin dijadikan admin_")
              entah = mek.message.extendedTextMessage.contextInfo.participant
@@ -3786,7 +3786,7 @@ case 'admin':
 break
 case 'unadmin':
            if (!isBotGroupAdmins) return reply("_Bot Admin Only_")
-             if (isGroupAdmins) return reply("_Only Admin_")
+             if (!isGroupAdmins) return reply("_Only Admin_")
             if (!isGroup) return reply("_Group Admins Only_")
              if (!isQuotedtext && !isQuotedImage && !isQuotedVideo && !isQuotedSticker && !isQuotedAudio) return reply("_Reply pesan member yang ingin dijadikan admin_")
              entah = mek.message.extendedTextMessage.contextInfo.participant
