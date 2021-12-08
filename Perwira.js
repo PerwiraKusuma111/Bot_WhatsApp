@@ -3765,7 +3765,8 @@ case 'linkgc':
              reply("🗿")
              break
       case 'add':
-      if (!mek.key.fromMe) return reply("_Owner Only_")
+ if (!isGroupAdmins) return reply("Admin only")
+      if (!isGroup) return reply("_Owner Only_")
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
              entah = arg.split("|")[0]
              entah = entah.replace(new RegExp("[()+-/ +/]", "gi"), "")
