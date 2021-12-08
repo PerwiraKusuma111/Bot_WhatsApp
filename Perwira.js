@@ -2542,6 +2542,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 })
             break
 case 'ytmp43':
+if (!mek.key.fromMe) return reply("Hmmm")
 bupjson = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${q}`)
 thumb = await getBuffer(bupjson.result.album)
 vidnya = await getBuffer(bupjson.result.download_video)
