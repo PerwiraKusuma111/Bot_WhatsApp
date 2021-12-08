@@ -1414,8 +1414,7 @@ uptime = process.uptime();
                 const userLevel = getLevelingLevel(sender)
 					const userXp = getLevelingXp(sender)
 					/*if (userLevel === undefined && userXp === undefined) return console.log("noregist")*/
-					const requiredXp = 1000 * (Math.pow(2, userLevel) - 1)
-/*if (!simi) {
+					const requiredXp = 1000 * (Math.pow(2, userLevel) - 
 if (!isGroup) {
 		if (!command) {
 		if (!isMedia) {
@@ -1423,7 +1422,7 @@ if (!isGroup) {
 		siminya = await fetchJson(`https://api-sv2.simsimi.net/v2/?text=${pop}&lc=id`)
 		msgsimi = siminya.success
 		conn.sendMessage(from, `${msgsimi}\n                                   _ˢⁱᵐⁱ ᵐᵉˢˢᵃᵍᵉ_`, text, {quoted: mek, sendEphemeral: true, contextInfo : {forwardingScore: 508, isForwarded: true}})
-		}}}}*/
+		}}}
 		
             switch(command){
             	case 'simi_on':
