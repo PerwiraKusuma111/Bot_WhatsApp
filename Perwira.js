@@ -1414,7 +1414,7 @@ uptime = process.uptime();
                 const userLevel = getLevelingLevel(sender)
 					const userXp = getLevelingXp(sender)
 					/*if (userLevel === undefined && userXp === undefined) return console.log("noregist")*/
-					const requiredXp = 1000 * (Math.pow(2, userLevel) - 
+					const requiredXp = 1000 * (Math.pow(2, userLevel) - 1)
      if (!isGroup) {
 		if (!command) {
 		if (!isMedia) {
