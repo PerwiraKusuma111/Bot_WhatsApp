@@ -2542,7 +2542,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
 })
             break
-case 'ytmp4':
+case 'ytmp43':
 bupjson = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${q}`)
 thumb = await getBuffer(bupjson.result.album)
 vidnya = await getBuffer(bupjson.result.download_video)
@@ -2559,7 +2559,7 @@ conn.sendMessage(from, thumb, image, {quoted: mek, caption: tampilann})
 conn.sendMessage(from, vidnya, video, {quoted: mek})
 break
  
-case 'ytmp43':
+case 'ytmp42':
 fjson = await fetchJson(`https://x-restapi.herokuapp.com/api/ytmp4?url=${q}&apikey=BETA`)
 thumbn = await getBuffer(fjson.thumb)
 dlvid = await getBuffer(fjson.dl_link)
@@ -2573,7 +2573,7 @@ conn.sendMessage(from, thumbn, image, {quoted: mek, caption: tampilany})
 conn.sendMessage(from, dlvid, video, {quoted: mek})
 break
 
-     case 'ytmp42':
+     case 'ytmp4':
             
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
