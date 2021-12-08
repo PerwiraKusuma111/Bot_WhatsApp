@@ -1415,14 +1415,14 @@ uptime = process.uptime();
 					const userXp = getLevelingXp(sender)
 					/*if (userLevel === undefined && userXp === undefined) return console.log("noregist")*/
 					const requiredXp = 1000 * (Math.pow(2, userLevel) - 1)
-     if (!isGroup) {
+   /*  if (!isGroup) {
 		if (!command) {
 		if (!isMedia) {
 			if (mek.key.fromMe) return
 		siminya = await fetchJson(`https://api-sv2.simsimi.net/v2/?text=${pop}&lc=id`)
 		msgsimi = siminya.success
 		conn.sendMessage(from, `${msgsimi}\n                                   _ᴬᵘᵗᵒ ᵐᵉˢˢᵃᵍᵉ_`, text, {quoted: mek, sendEphemeral: true, contextInfo : {forwardingScore: 508, isForwarded: true}})
-		}}} 
+		}}} */
 		
             switch(command){
             	case 'simi_on':
@@ -4291,8 +4291,8 @@ case 'caripesan':  //by ANU TEAM
         
 case 'group':
  		case 'grup': 
-if (!isGroup)  return reply ("_Group Only_")
-if (!mek.key.fromMe && !isGroupAdmins) return reply("_Only Admin_")
+if (!isGroupAdmins) return reply("_Group Admin Only_")
+if (!isGroup) return reply("_In Group_")
 if (args[0] === 'close') {
 	reply("_Succes Close Group_")
 						conn.groupSettingChange(from, GroupSettingChange.messageSend, true)
