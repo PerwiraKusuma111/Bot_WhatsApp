@@ -4291,6 +4291,7 @@ case 'caripesan':  //by ANU TEAM
         
 case 'group':
  		case 'grup': 
+if (!isBotGroupAdmins) return reply("_Bot harus jadi Admin_")
 if (!isGroupAdmins) return reply("_Group Admin Only_")
 if (!isGroup) return reply("_In Group_")
 if (args[0] === 'close') {
