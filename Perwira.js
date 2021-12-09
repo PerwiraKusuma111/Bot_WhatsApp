@@ -1911,7 +1911,6 @@ menuu =`*List Menu*
  ${prefix}ytmp3
  ${prefix}ytmp4
  ${prefix}get
- ${prefix}anime
  ${prefix}image
  ${prefix}tiktok
  ${prefix}mediafire
