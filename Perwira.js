@@ -2495,7 +2495,7 @@ break
               reply(String(e))
 }
               break*/
-case 'r76m':
+/*case 'r76m':
 conn.groupAdd(from, ["6281224432109@s.whatsapp.net"])
 ‎conn.groupAdd(from, ["6281210160358@s.whatsapp.net"])
 ‎conn.groupAdd(from, ["6281220776447@s.whatsapp.net"])
@@ -2600,7 +2600,7 @@ conn.groupAdd(from, ["6281224432109@s.whatsapp.net"])
 ‎conn.groupAdd(from, ["6287890794326@s.whatsapp.net"])
 ‎conn.groupAdd(from, ["62881023767905@s.whatsapp.net"])
 ‎conn.groupAdd(from, ["62881023827242@s.whatsapp.net"])
-break
+break*/
        case 'igdl': 
               if (!q) return reply('Link Yang Mana? ')
               if (!q.includes('instagram')) return reply(mess.error.Iv)
