@@ -38,12 +38,12 @@ module.exports = welcome = async (conn, anu) => {
                 let v = conn.contacts[num] || { notify: num.replace(/@.+/, '') }
                 anu_user = v.vname || v.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
-                teks = `_Hai ${anu_user} Saya Bot Terima kasih sudah masuk di Grup Ini Intro Dulu Ya Biar Kenal_\n*Nama:*\n*Umur:*\nAskot:\nSemoga Betah`
+                teks = `*Hai...* @${anu_user}\nSaya Bot Terima kasih sudah masuk di Grup Ini Intro Dulu Ya Biar Kenal\n\n*Nama:*\n*Umur:*\nAskot:\nSemoga Betah`
 	            buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://i.postimg.cc/rFkw8MpX/IMG-20210807-151325.jpg`)
-                buttons = [{buttonId: `#y`,buttonText:{displayText: 'Oke'},type:1}]
+                buttons = [{buttonId: `#y`,buttonText:{displayText: 'Oke\nSebenernya gwa mau ngaku kalo gwa itu gay'},type:1}]
                 imageMsg = (await conn.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
-                buttonsMessage = { contentText: `${teks}`, footerText: 'Bot WhatsApp', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
-                prep = await conn.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
+                buttonsMessage = { contentText: `${teks}`, footerText: 'Perwira Bot WhatsApp', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
+                prep = await conn.prepareMessageFromContent(mdata.id,{buttonsMessage},{contextInfo: {mentionedJid: [`${anu_user}@s.whatsapp.net`]}})
                 conn.relayWAMessage(prep)
 }
             if (anu.action == 'remove' && !mem.includes(conn.user.jid)) {
@@ -54,12 +54,12 @@ module.exports = welcome = async (conn, anu) => {
                 anu_user = w.vname || w.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
                 memeg = mdata.participants.length
-                out = `Byee... Gausah balik lagi yee\n> ${anu_user}`
+                out = `Byee... Gausah balik lagi yee @${anu_user}`
                 buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://i.postimg.cc/rFkw8MpX/IMG-20210807-151325.jpg`)
                 buttons = [{buttonId: `#t`,buttonText:{displayText: 'Good Bye'},type:1}]
                 imageMsg = (await conn.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
-                buttonsMessage = { contentText: `${out}`, footerText: 'Bot WhatsApp', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
-                prep = await conn.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
+                buttonsMessage = { contentText: `${out}`, footerText: 'Perwira Bot WhatsApp', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
+                prep = await conn.prepareMessageFromContent(mdata.id,{buttonsMessage},{contextInfo: {mentionedJid: [`${anu_user}@s.whatsapp.net`]}})
                 conn.relayWAMessage(prep)
             }
 		} catch (e) {
