@@ -3554,7 +3554,7 @@ break
               reply(`*Bantu Subscribe agar chanel berkembang*\nhttps://youtu.be/EdPhHMoPL5s`)
               break
 case 'infoig': 
-              reply(`*Bantu Subscribe agar chanel berkembang*\nhttps://www.instagram.com/p/CTwjxbRpTCe/?utm_medium=copy_link`)
+              reply(`*Follow Yee gaess*\nhttps://www.instagram.com/p/CTwjxbRpTCe/?utm_medium=copy_link`)
               break
        case 'masukandata':
              reply(`*「BOT MELAYANI」*\n\n━━━━━━━━━━━━━━━━━━━━\n\nMASUKKANA DATA BERIKUT\n*•NAMA GAME:*\n*•ID GAME:*\n*•USER NAME:*\n━━━━━━━━━━━━━━━━━━━━\n*NOTE:*\n*1.* _JANGAN LUPA BUKTI TRXNYA_\n*2.* _OTOMATIS PESANAN_\n_LANSUNG DI PROSES_\n*3.* _PESANAN ANDA DI PROSES_\n_OLEH_\n\n   *©HermanBot*\n\n_JIKA PESANAN ANDA LOW_\n_PROSES MOHON BERSABAR_\nwa.me/6283146208804`)
@@ -4269,14 +4269,14 @@ break
 }
                break*/
         case 'tes':
-               reply('Okeh nyala')
+               reply('_Bot Online_')
                break
-        case 'info':
+        /*case 'info':
         case 'infobot':  // Jangan Di Ubah Plise
                gopeynya = 'https://i.ibb.co/kynNYTh/ganteng.jpg'
                thankslort = `*[━━━━ INFO BOT ━━━━]*\n*➤ Nama : Hêrmåñ ßð†z*\n*➤ Pukul : ${moment().utcOffset('+0700').format('HH:mm')}*\n*➤ Tanggal : ${moment.tz('Asia/Jakarta').format('DD/MM')}*\n*➤ Tipe : Node Js*\n*➤ Version : 3.3*\n*[━━━━━━━━━━━━━━━━━━]*`
              conn.sendMessage(from, await getBuffer(gopeynya), image, {quoted: ftoko, caption: thankslort })
-             break
+             break*/
       case 'get':
       case 'fetch': //ambil dari nuru
              if (!/^https?:\/\//.test(q)) return reply('Awali *URL* dengan http:// atau https://')
